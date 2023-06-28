@@ -1,5 +1,7 @@
 .navbar .navbar-brand {
     color: #e50914;
+    text-shadow: 5px 5px 8px black;
+
     font-weight: bold;
 }
 

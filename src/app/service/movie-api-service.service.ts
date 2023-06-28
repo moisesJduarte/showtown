@@ -21,4 +21,12 @@ export class MovieApiServiceService {
   }
 
 
+
+  // trendingmovieaoidata
+
+  trendingMovieApiData(): Observable<any> {
+    return this.http.get(`${this.baseurl}/trending/movie/day?api_key=${this.apikey}`);
+  }
+
+
 }

@@ -13,16 +13,32 @@ export class HomeComponent implements OnInit {
 
   ) { }
 
+  bannerResult: any = [];
+  trendingMovieResult: any = []
+
+
   ngOnInit(): void {
     this.bannerData();
+    this.trendingData();
   }
 
   bannerData() {
     this.service.bannerApiData().subscribe((result) => {
       console.log(result, 'bannerresult#');
-
+      this.bannerResult = result.results;
 
     });
+
+
   }
 
+
+
+  trendingData() {
+    this.service.trendingMovieApiData().subscribe((result) => {
+      console.log(result, 'trendingresult#');
+      this.trendingMovieResult = result.results;
+
+    })
+  }
 }
