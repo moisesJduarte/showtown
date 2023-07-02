@@ -24,9 +24,10 @@
 <div class="contain mt-3 p-4">
     <div class="row">
         <h5 class="text-white">trending Movies</h5>
-        <div class="rowposter">
+        <div class="rowposter mt-3 p-2">
             <ng-container *ngFor="let t of trendingMovieResult">
-                <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" class="rowimg largeposter" alt="...">
+                <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" class="rowimg largeposter" alt="..."
+                    [routerLink]="['/movie',t.id]">
             </ng-container>
         </div>
     </div>
